@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="用户画像,">
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="13iqin">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="从0到1构建用户画像系列，旨在帮助读者快速构建一个简单好用的可视化用户画像系统。">
+<meta name="keywords" content="用户画像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从0到1构建用户画像（一）">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/从0到1构建用户画像（一）/index.html">
 <meta property="og:site_name" content="13iqin">
+<meta property="og:description" content="从0到1构建用户画像系列，旨在帮助读者快速构建一个简单好用的可视化用户画像系统。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2019/05/14/从0到1构建用户画像（一）/user_profile_design.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/05/14/从0到1构建用户画像（一）/user_profile_tag.jpg">
+<meta property="og:updated_time" content="2019-05-14T06:19:49.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="13iqin">
+<meta name="twitter:title" content="从0到1构建用户画像（一）">
+<meta name="twitter:description" content="从0到1构建用户画像系列，旨在帮助读者快速构建一个简单好用的可视化用户画像系统。">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/14/从0到1构建用户画像（一）/user_profile_design.jpg">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/14/从0到1构建用户画像（一）/">
 
 
 
 
 
-  <title>13iqin</title>
+  <title>从0到1构建用户画像（一） | 13iqin</title>
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +241,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/14/从0到1构建用户画像（一）/" itemprop="url">从0到1构建用户画像（一）</a></h1>
+          <h1 class="post-title" itemprop="name headline">从0到1构建用户画像（一）</h1>
         
 
         <div class="post-meta">
@@ -340,18 +345,22 @@
       
 
       
-        
-          <p>从0到1构建用户画像系列，旨在帮助读者快速构建一个简单好用的可视化用户画像系统。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/14/从0到1构建用户画像（一）/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>从0到1构建用户画像系列，旨在帮助读者快速构建一个简单好用的可视化用户画像系统。<br><a id="more"></a></p>
+<h4 id="什么是用户画像？"><a href="#什么是用户画像？" class="headerlink" title="什么是用户画像？"></a>什么是用户画像？</h4><blockquote>
+<p>用户画像（User Profile)是根据用户社会属性，生活习惯和消费行为等信息抽象出的一个标签化的用户模型。构建用户画像的核心工作是给用户贴“标签”，而标签是通过对用户信息分析而来的高度精炼的特征标识。</p>
+</blockquote>
+<h4 id="方案设计"><a href="#方案设计" class="headerlink" title="方案设计"></a>方案设计</h4><p>以下是一个简要的方案设计说明，仅作为参考。<br><img src="/2019/05/14/从0到1构建用户画像（一）/user_profile_design.jpg" title="用户画像方案设计"></p>
+<h4 id="where-to-go"><a href="#where-to-go" class="headerlink" title="where to go?"></a>where to go?</h4><p>整个思路是这样的：</p>
+<ul>
+<li>产品层：结合业务设计N个用户标签，以及计算规则，设计用户画像系统的可视化展现或者平台化服务能力，以及画像系统的评估机制与监控体系。</li>
+<li>技术层：收集所需用户数据，利用大数据平台工具进行标签计算、存储、管理等开发。</li>
+<li>业务层：用户画像系统在实际业务中的应用，追踪标签实际数据表现，拿到反数据馈形成数据闭环。</li>
+</ul>
+<h4 id="设计用户标签"><a href="#设计用户标签" class="headerlink" title="设计用户标签"></a>设计用户标签</h4><p>用户画像是一个复杂的系统，随着产品的逐渐成熟，会根据不同的业务场景设计不同的标签。假设我们处于电商行业，刚开始我们可以这样设计标签：<br><img src="/2019/05/14/从0到1构建用户画像（一）/user_profile_tag.jpg" title="用户画像标签设计"><br>需要注意的是，更加复杂的用户画像不仅仅是我们可以用语言描述的标签。在机器里，标签实际上就是向量化结果，人不一定能够直观地理解，比如我们用潜语义模型构建用户兴趣，或者矩阵分解得到的隐因子，或者深度学习模型学习用户的embedding向量，这一类通常是不可解释的。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>这一节主要是解释了用户画像的基本概念与用户画像系统的简单设计。下一节将会介绍相关标签的开发。</p>
+
       
-    </p></div>
+    </div>
     
     
     
@@ -364,14 +373,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/用户画像/" rel="tag"># 用户画像</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -381,10 +396,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -392,6 +408,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -412,8 +432,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +512,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是用户画像？"><span class="nav-number">1.</span> <span class="nav-text">什么是用户画像？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方案设计"><span class="nav-number">2.</span> <span class="nav-text">方案设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#where-to-go"><span class="nav-number">3.</span> <span class="nav-text">where to go?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计用户标签"><span class="nav-number">4.</span> <span class="nav-text">设计用户标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -616,6 +661,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
